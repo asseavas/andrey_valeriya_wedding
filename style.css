@@ -1,0 +1,35 @@
+
+
+@font-face {
+  font-family: "Allegretto";
+  src: url("fonts/ofont.ru_Allegretto Script Two.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Optima";
+  src: url("fonts/ofont.ru_Optima.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Optima", sans-serif;
+  max-width: 480px;
+  margin: 0 auto;
+  overflow-x: hidden;
+}
+
+.title {
+  font-family: "Allegretto", sans-serif;
+  text-align: center;
+}
