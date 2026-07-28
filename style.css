@@ -238,9 +238,22 @@ body {
   margin-inline: auto;
 }
 
+.place-link {
+  height: auto;
+  padding: 10px 47px;
+  border-radius: 10px;
+  border: 1px solid #333333;
+  color: #333333;
+  text-decoration:  none;
+}
+
+.place-link:hover {
+  text-decoration: underline;
+}
+
 .place-img {
   width: 120%;
-  max-height: 417px;
+  max-height: 450px;
   min-height: 350px;
   margin: 45px -10% 29px;
 }
