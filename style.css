@@ -60,16 +60,18 @@ body {
   color:  white;
 }
 
+.pearls {
+  position: absolute;
+}
+
 .top-pearls {
   width: 23px;
-  position: absolute;
   top: 0;
   left: 8%;
 }
 
 .bottom-pearls {
   width: 23px;
-  position: absolute;
   right: 8%;
   bottom: 0;
   rotate: 180deg;
@@ -121,17 +123,17 @@ body {
   height: 400px;
   overflow: hidden;
   position: relative;
-  margin-bottom: 70px;
 }
 
 .silk {
-  height: 270px;
   display: block;
   position: relative;
+  z-index: 3;
 }
 
 .invitation-silk {
   width: 160%;
+  height: 270px;
   left: 5%;
   transform: translateX(-30%);
   rotate: 7deg;
@@ -140,7 +142,6 @@ body {
 
 .flower {
   position: absolute;
-  z-index: 2;
 }
 
 .invitation-flower-left {
@@ -148,6 +149,7 @@ body {
   width: 255px;
   left: -90px;
   rotate: 35deg;
+  z-index: 4;
 }
 
 .invitation-flower-right {
@@ -155,12 +157,79 @@ body {
   width: 250px;
   right: -100px;
   rotate: 320deg;
+  z-index: 4;
 }
 
-.invitation-pearls {
+.invitation-pearls-top {
   top: 85px;
   left: 46%;
   width: 47px;
-  position: absolute;
   rotate:  340deg;
+}
+
+.invitation-pearls-bottom {
+  bottom: 8px;
+  right: 12%;
+  width: 23px;
+  rotate:  95deg;
+}
+
+.calendar {
+  position: relative;
+  margin-top: 15px;
+}
+
+.calendar-title {
+  position: absolute;
+  top: -10px;
+  left: 33%;
+}
+
+.calendar-wrapper {
+  width: auto;
+  height: 300px;
+  position: relative;
+}
+
+.calendar-img {
+  width: 100%;
+  height: 100%;
+  margin-left: 5px;
+}
+
+.heart {
+  position: absolute;
+  right: 81px;
+  bottom: 108px;
+  width: 40px;
+  rotate: 35deg;
+}
+
+.calendar-img-wrapper {
+  width: 100%;
+  height: 380px;
+  overflow: hidden;
+  position: relative;
+}
+
+.calendar-silk {
+  height: 300px;
+  rotate: 185deg;
+  width: 160%;
+  left: -200px;
+  top: 70px;
+}
+
+.calendar-flower {
+  bottom: -200px;
+  width: 245px;
+  left: 26%;
+  rotate: 35deg;
+  transform: scaleX(-1);
+}
+
+.calendar-pearls {
+  width: 32px;
+  left: 40px;
+  bottom: 30px;
 }
