@@ -56,7 +56,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 20px 10px 40px;
+  padding: 20px 15px 40px;
   color:  white;
 }
 
@@ -96,7 +96,7 @@ body {
 }
 
 .invitation-text-wrapper {
-  padding-inline: 10px;
+  padding-inline: 15px;
 }
 
 .subtitle {
@@ -114,7 +114,7 @@ body {
 .invitation-text-box {
   display: flex;
   flex-direction: column;
-  padding-inline: 50px;
+  padding-inline: 35px;
   gap: 25px;
 }
 
@@ -175,34 +175,20 @@ body {
 }
 
 .calendar {
-  position: relative;
-  margin-top: 15px;
-}
-
-.calendar-title {
-  position: absolute;
-  top: -10px;
-  left: 33%;
+  margin-top: 10px;
 }
 
 .calendar-wrapper {
-  width: auto;
-  height: 300px;
   position: relative;
+  width: 100%;
+  height: 100%;
+  margin-top: 25px;
 }
 
 .calendar-img {
   width: 100%;
   height: 100%;
   margin-left: 5px;
-}
-
-.heart {
-  position: absolute;
-  right: 81px;
-  bottom: 108px;
-  width: 40px;
-  rotate: 35deg;
 }
 
 .calendar-img-wrapper {
@@ -244,6 +230,7 @@ body {
   flex-direction: column;
   align-items: center;
   gap: 25px;
+  margin-inline: 15px;
 }
 
 .place-title {
@@ -253,6 +240,7 @@ body {
 
 .place-img {
   width: 120%;
+  height: 417px;
   margin: 45px -10% 29px;
 }
 
@@ -266,10 +254,14 @@ body {
   gap: 25px;
 }
 
+.place-text-wrapper {
+  margin-inline: 15px;
+}
+
 .place-silk {
   width: 180%;
   height: 360px;
-  top: 10px;
+  top: 20px;
   left: -35%;
   transform: translateX(-20%);
   rotate: 21deg;
@@ -284,7 +276,7 @@ body {
 
 .place-flower {
   width: 180px;
-  top: 75px;
+  top: 90px;
   right: -20px;
   rotate: 322deg;
 }
