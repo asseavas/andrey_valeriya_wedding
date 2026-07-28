@@ -233,3 +233,58 @@ body {
   left: 40px;
   bottom: 30px;
 }
+
+.place {
+  overflow: hidden;
+  margin-top: 10px;
+}
+
+.place-text-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+}
+
+.place-title {
+  width: 60%;
+  margin-inline: auto;
+}
+
+.place-img {
+  width: 120%;
+  margin: 45px -10% 29px;
+}
+
+.place-img-wrapper {
+  position: relative;
+  width: 100%;
+  height: 420px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.place-silk {
+  width: 180%;
+  height: 360px;
+  top: 10px;
+  left: -35%;
+  transform: translateX(-20%);
+  rotate: 21deg;
+}
+
+.place-pearls {
+  width: 32px;
+  top: 140px;
+  left: 38%;
+  rotate: 180deg;
+}
+
+.place-flower {
+  width: 180px;
+  top: 75px;
+  right: -20px;
+  rotate: 322deg;
+}
