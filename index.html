@@ -12,6 +12,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display+SC&display=swap" rel="stylesheet">
 </head>
 <body>
+<div class="envelope-overlay" id="envelopeOverlay">
+    <p class="envelope-text">Нажмите, <br> чтобы открыть</p>
+
+    <div class="envelope-top"></div>
+    <div class="envelope-bottom"></div>
+
+    <button class="envelope-seal" id="envelopeSeal" aria-label="Открыть приглашение"></button>
+</div>
+
     <div class="container">
         <section class="main">
             <div class="title-container">
@@ -27,7 +36,7 @@
             <div class="invitation-text-wrapper">
                 <h3 class="subtitle invitation-title">Дорогие <br> Родные и близкие!</h3>
                 <div class="invitation-text-box">
-                    <p>19 сентября 2026 года состоится долгожданное и радостное событие - наша свадьба! </p>
+                    <p>19 сентября 2026 года состоится долгожданное и радостное событие - <br> наша свадьба! </p>
                     <p>Этот тёплый день мы будем счастливы провести в кругу самых близких <br> и родных людей, <br> в праздничной и душевной атмосфере. </p>
                     <p>Мы с огромной любовью приглашаем Вас разделить этот особенный момент нашей жизни! </p>
                 </div>
@@ -90,5 +99,21 @@
             </div>
         </section>
     </div>
+
+<script>
+    document.body.style.overflow = 'hidden';
+
+    const overlay = document.getElementById('envelopeOverlay');
+    const seal = document.getElementById('envelopeSeal');
+
+    seal.addEventListener('click', () => {
+        overlay.classList.add('opening');
+
+        setTimeout(() => {
+            overlay.classList.add('hidden');
+            document.body.style.overflow = '';
+        }, 1500);
+    });
+</script>
 </body>
 </html>
