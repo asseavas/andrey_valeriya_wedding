@@ -12,6 +12,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display+SC&display=swap" rel="stylesheet">
 </head>
 <body>
+<audio id="bgMusic" src="audio/wedding_melody.mp3" loop></audio>
+
 <div class="envelope-overlay" id="envelopeOverlay">
     <p class="envelope-text">Нажмите, <br> чтобы открыть</p>
 
@@ -22,6 +24,15 @@
 </div>
 
     <div class="container">
+        <button class="sound-toggle" id="soundToggle" aria-label="Включить/выключить музыку">
+            <svg class="icon-sound-on" viewBox="-1 0 19 19" xmlns="http://www.w3.org/2000/svg">
+                <path d="M16.417 9.583A7.917 7.917 0 1 1 8.5 1.666a7.917 7.917 0 0 1 7.917 7.917zM7.84 6.06c0-.435-.252-.54-.56-.231l-2.12 2.12H3.704a.794.794 0 0 0-.791.792v1.686a.794.794 0 0 0 .791.792h1.457l2.12 2.12c.308.308.56.204.56-.231zm1.792 5.337a2.564 2.564 0 0 0 0-3.626.396.396 0 1 0-.56.56 1.773 1.773 0 0 1 0 2.506.396.396 0 1 0 .56.56zm2.597-1.813a4.38 4.38 0 0 0-1.292-3.118.396.396 0 0 0-.56.56 3.618 3.618 0 0 1 0 5.116.396.396 0 1 0 .56.56 4.38 4.38 0 0 0 1.292-3.118z"/>
+            </svg>
+            <svg class="icon-sound-off" viewBox="-1 0 19 19" xmlns="http://www.w3.org/2000/svg">
+                <path d="M16.417 9.583A7.917 7.917 0 1 1 8.5 1.666a7.917 7.917 0 0 1 7.917 7.917zM7.84 6.05c0-.435-.252-.54-.56-.232L5.16 7.94H3.704a.794.794 0 0 0-.791.793v1.686a.794.794 0 0 0 .791.792h1.457l2.12 2.12c.308.308.56.204.56-.232zm3.84 3.524 1.49-1.49a.396.396 0 0 0-.56-.56l-1.49 1.49-1.49-1.49a.396.396 0 0 0-.56.56l1.49 1.49-1.49 1.49a.396.396 0 1 0 .56.56l1.49-1.49 1.49 1.49a.396.396 0 0 0 .56-.56z"/>
+            </svg>
+        </button>
+
         <section class="main">
             <div class="title-container">
                 <img src="images/pearls.png" class="pearls top-pearls" alt="">
@@ -105,14 +116,34 @@
 
     const overlay = document.getElementById('envelopeOverlay');
     const seal = document.getElementById('envelopeSeal');
+    const music = document.getElementById('bgMusic');
+    const soundToggle = document.getElementById('soundToggle');
+
+    music.addEventListener('play', () => {
+        soundToggle.classList.remove('muted');
+    });
+
+    music.addEventListener('pause', () => {
+        soundToggle.classList.add('muted');
+    });
 
     seal.addEventListener('click', () => {
         overlay.classList.add('opening');
+        music.play().catch(() => {});
 
         setTimeout(() => {
             overlay.classList.add('hidden');
             document.body.style.overflow = '';
+            soundToggle.classList.add('visible');
         }, 1500);
+    });
+
+    soundToggle.addEventListener('click', () => {
+        if (music.paused) {
+            music.play();
+        } else {
+            music.pause();
+        }
     });
 </script>
 </body>
