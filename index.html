@@ -16,7 +16,6 @@
 
 <div class="envelope-overlay" id="envelopeOverlay">
     <p class="envelope-text">Нажмите, <br> чтобы открыть</p>
-
     <div class="envelope-top"></div>
     <div class="envelope-bottom"></div>
 
@@ -84,7 +83,7 @@
             </div>
 
             <img src="images/vavilon.png" class="place-img" alt="Vavilon restaurant">
-            <div class="place-img-wrapper">
+            <div class="place-rsvp-wrapper">
                 <div class="place-text-wrapper">
                     <h3 class="subtitle">Присутствие</h3>
                     <p>Просим подтвердить своё присутствие до <br> 01.09.2026 включительно</p>
@@ -111,40 +110,6 @@
         </section>
     </div>
 
-<script>
-    document.body.style.overflow = 'hidden';
-
-    const overlay = document.getElementById('envelopeOverlay');
-    const seal = document.getElementById('envelopeSeal');
-    const music = document.getElementById('bgMusic');
-    const soundToggle = document.getElementById('soundToggle');
-
-    music.addEventListener('play', () => {
-        soundToggle.classList.remove('muted');
-    });
-
-    music.addEventListener('pause', () => {
-        soundToggle.classList.add('muted');
-    });
-
-    seal.addEventListener('click', () => {
-        overlay.classList.add('opening');
-        music.play().catch(() => {});
-
-        setTimeout(() => {
-            overlay.classList.add('hidden');
-            document.body.style.overflow = '';
-            soundToggle.classList.add('visible');
-        }, 1500);
-    });
-
-    soundToggle.addEventListener('click', () => {
-        if (music.paused) {
-            music.play();
-        } else {
-            music.pause();
-        }
-    });
-</script>
+    <script src="script.js"></script>
 </body>
 </html>

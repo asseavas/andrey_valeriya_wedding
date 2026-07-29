@@ -21,12 +21,12 @@
 }
 
 body {
-  font-family: "VeraHumana", sans-serif;
-  background: #ECECEC;
   max-width: 450px;
   margin: 0 auto;
-  text-align: center;
+  background: #ECECEC;
   color: #333333;
+  font-family: "VeraHumana", sans-serif;
+  text-align: center;
   overflow-x: hidden;
 }
 
@@ -37,8 +37,8 @@ body {
   width: 100%;
   max-width: 450px;
   margin: 0 auto;
+  height: 100vh;
   height: 100svh;
-  fallback-height: 100vh;
   overflow: hidden;
   transition: visibility 0.6s ease;
 }
@@ -49,16 +49,16 @@ body {
 }
 
 .envelope-text {
-  font-family: "Allegretto", sans-serif;
-  width: 100%;
   position: absolute;
   bottom: 20%;
   left: 50%;
-  transform: translateX(-50%);
   z-index: 10;
+  width: 100%;
+  color: #333333;
+  font-family: "Allegretto", sans-serif;
   font-size: 38px;
   letter-spacing: 1px;
-  color: #333333;
+  transform: translateX(-50%);
   transition: opacity 0.4s ease;
 }
 
@@ -77,21 +77,21 @@ body {
 }
 
 .envelope-top {
-  height: 60%;
   top: 0;
+  z-index: 3;
+  height: 60%;
   background-image: url("images/envelope_top.png");
   background-position: bottom 10px  center ;
   background-repeat: no-repeat;
-  z-index: 3;
   transform-origin: top center;
 }
 
 .envelope-bottom {
-  height: 80%;
   bottom: 0;
+  z-index: 2;
+  height: 80%;
   background-image: url("images/envelope_bottom.png");
   background-position: bottom center;
-  z-index: 2;
   transform-origin: bottom center;
 }
 
@@ -110,22 +110,22 @@ body {
   position: absolute;
   top: 55%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  z-index: 5;
   width: 145px;
   height: 150px;
-  border-radius: 50%;
   border: none;
+  border-radius: 50%;
   appearance: none;
   -webkit-appearance: none;
-  -webkit-tap-highlight-color: transparent;
   outline: none;
-  cursor: pointer;
   background-color: transparent;
   background-image: url("images/seal.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-position:  center;
-  z-index: 5;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transform: translate(-50%, -50%);
   transition: transform 1.4s cubic-bezier(0.65, 0, 0.35, 1),
   opacity 1s ease;
 }
@@ -140,14 +140,13 @@ body {
   pointer-events: none;
 }
 
-
 .main {
   position: relative;
+  height: 720px;
+  padding-top: 40px;
   background-image: url("images/main.png");
   background-size: cover;
   background-position: center;
-  height: 720px;
-  padding-top: 40px;
 }
 
 .main::before {
@@ -176,15 +175,15 @@ body {
 }
 
 .top-pearls {
-  width: 23px;
   top: 0;
   left: 8%;
+  width: 23px;
 }
 
 .bottom-pearls {
-  width: 23px;
   right: 8%;
   bottom: 0;
+  width: 23px;
   rotate: 180deg;
 }
 
@@ -198,8 +197,8 @@ body {
 }
 
 .name-title {
-  font-size: 22px;
   margin-top: 5px;
+  font-size: 22px;
 }
 
 .invitation {
@@ -230,25 +229,25 @@ body {
 }
 
 .invitation-img-wrapper {
+  position: relative;
   width: 100%;
   height: 400px;
   overflow: hidden;
-  position: relative;
 }
 
 .silk {
-  display: block;
   position: relative;
   z-index: 3;
+  display: block;
 }
 
 .invitation-silk {
+  top: 135px;
+  left: 5%;
   width: 160%;
   height: 270px;
-  left: 5%;
   transform: translateX(-30%);
   rotate: 7deg;
-  top: 135px;
 }
 
 .flower {
@@ -257,18 +256,18 @@ body {
 
 .invitation-flower-left {
   top: -30px;
-  width: 255px;
   left: -90px;
-  rotate: 35deg;
   z-index: 4;
+  width: 255px;
+  rotate: 35deg;
 }
 
 .invitation-flower-right {
   top: 0;
-  width: 250px;
   right: -100px;
-  rotate: 320deg;
   z-index: 4;
+  width: 250px;
+  rotate: 320deg;
 }
 
 .invitation-pearls-top {
@@ -303,37 +302,37 @@ body {
 }
 
 .calendar-img-wrapper {
+  position: relative;
   width: 100%;
   height: 380px;
   overflow: hidden;
-  position: relative;
 }
 
 .calendar-silk {
+  top: 70px;
+  left: -200px;
+  width: 160%;
   height: 300px;
   rotate: 185deg;
-  width: 160%;
-  left: -200px;
-  top: 70px;
 }
 
 .calendar-flower {
   bottom: -200px;
-  width: 245px;
   left: 26%;
+  width: 245px;
   rotate: 35deg;
   transform: scaleX(-1);
 }
 
 .calendar-pearls {
-  width: 32px;
-  left: 40px;
   bottom: 30px;
+  left: 40px;
+  width: 32px;
 }
 
 .place {
-  overflow: hidden;
   margin-top: 10px;
+  overflow: hidden;
 }
 
 .place-text-wrapper {
@@ -352,8 +351,8 @@ body {
 .place-link {
   height: auto;
   padding: 10px 47px;
-  border-radius: 10px;
   border: 1px solid #333333;
+  border-radius: 10px;
   color: #333333;
   text-decoration:  none;
 }
@@ -369,40 +368,36 @@ body {
   margin: 45px -10% 29px;
 }
 
-.place-img-wrapper {
+.place-rsvp-wrapper {
   position: relative;
   width: 100%;
   height: 440px;
-  overflow: hidden;
   display: flex;
   flex-direction: column;
   gap: 25px;
-}
-
-.place-text-wrapper {
-  margin-inline: 15px;
+  overflow: hidden;
 }
 
 .place-silk {
-  width: 180%;
-  height: 360px;
   top: 20px;
   left: -35%;
+  width: 180%;
+  height: 360px;
   transform: translateX(-20%);
   rotate: 21deg;
 }
 
 .place-pearls {
-  width: 32px;
   top: 140px;
   left: 38%;
+  width: 32px;
   rotate: 180deg;
 }
 
 .place-flower {
-  width: 180px;
   top: 90px;
   right: -20px;
+  width: 180px;
   rotate: 322deg;
 }
 
@@ -416,15 +411,15 @@ body {
 }
 
 .footer-top-pearls {
-  width: 20px;
   top: -5px;
   right: 5%;
+  width: 20px;
 }
 
 .footer-bottom-pearls {
-  width: 20px;
   left: 6%;
   bottom: 30px;
+  width: 20px;
   rotate: 70deg;
 }
 
@@ -434,51 +429,51 @@ body {
 }
 
 .footer-img-wrapper {
-  width: 100%;
-  overflow: hidden;
   position: relative;
+  width: 100%;
+  height: 720px;
+  overflow: hidden;
   background-image: url("images/footer_image.png");
   background-size: 600px;
   background-repeat: no-repeat;
   background-position: bottom;
-  height: 720px;
 }
 
 .footer-silk {
+  top: 35px;
+  left: -33%;
   width: 190%;
   height: 338px;
-  rotate:  337deg;
-  left: -33%;
   transform: scaleX(-1);
-  top: 35px;
+  rotate:  337deg;
 }
 
 .footer-flower {
-  width: 250px;
   top: -12px;
   left: -10px;
+  width: 250px;
   rotate: 30deg;
 }
 
 .sound-toggle {
   position: fixed;
-  bottom: 10%;
   right: 5%;
+  bottom: 10%;
+  z-index: 500;
   width: 45px;
   height: 45px;
+  padding: 0;
   border-radius: 50%;
   border: none;
-  background-color: #FFFFFFD8;
   display: flex;
   align-items: center;
   justify-content: center;
-  cursor: pointer;
-  z-index: 500;
-  padding: 0;
+  background-color: #FFFFFFD8;
   box-shadow: 0 2px 10px rgba(0,0,0,0.2);
-  transition: transform 0.2s ease, opacity 0.4s ease;
   opacity: 0;
+  cursor: pointer;
   pointer-events: none;
+  transition: transform 0.2s ease, opacity 0.4s ease;
 }
 
 .sound-toggle.visible {
@@ -493,7 +488,7 @@ body {
 .sound-toggle svg {
   width: 45px;
   height: 45px;
-  fill: #aaaaaa;
+  fill: #AAAAAA;
 }
 
 .icon-sound-off {
